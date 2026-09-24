@@ -1,147 +1,310 @@
-# MissionPlanner
+# SENTRIX Mission Planner
 
-![Dot Net](https://github.com/ardupilot/missionplanner/actions/workflows/main.yml/badge.svg) ![Android](https://github.com/ardupilot/missionplanner/actions/workflows/android.yml/badge.svg) ![OSX/IOS](https://github.com/ardupilot/missionplanner/actions/workflows/mac.yml/badge.svg)
+> **SENTRIX Mission Planner is an ongoing student project that aims to advance open-source ground control software for UAVs through AI-powered autonomy and intelligent systems. Based on Mission Planner and extended through subsequent development by MateoGM, Colombia, the project focuses on research, learning, experimentation, and the development of new AI capabilities for UAVs. Spanish language support is also planned across the complete application, including the original Mission Planner components and all subsequent SENTRIX developments.**
 
-Website : http://ardupilot.org/planner/
+![SENTRIX Mission Planner](docs/images/sentrix-banner.png)
 
-Forum : http://discuss.ardupilot.org/c/ground-control-software/mission-planner
+---
 
-Download latest stable version : http://firmware.ardupilot.org/Tools/MissionPlanner/MissionPlanner-latest.msi
+## About SENTRIX
 
-Changelog : https://github.com/ArduPilot/MissionPlanner/blob/master/ChangeLog.txt
+SENTRIX Mission Planner is an open-source student project focused on the evolution of UAV ground-control software through artificial intelligence, intelligent systems, and autonomous capabilities.
 
-License : https://github.com/ArduPilot/MissionPlanner/blob/master/COPYING.txt
+The project is based on Mission Planner and progressively extends it through original research, software development, AI experimentation, UAV data analysis, perception, autonomy, and future intelligent-control capabilities.
 
+SENTRIX is developed as a learning, research, and experimentation platform. New functionality will be introduced progressively as the project architecture and software engineering practices mature.
 
-## How to compile
+### Project Status
 
-### On Windows (Recommended)
+- **Status:** In development
+- **Type:** Student / research project
+- **Platform:** UAV Ground Control Station
+- **Original development:** Mission Planner
+- **Subsequent development:** MateoGM — Colombia
 
-#### 1. Install software
+As a student beginning my journey in programming and artificial intelligence, contributions, suggestions, bug reports, and improvements to the new SENTRIX code are welcome and can help the project grow.
 
-##### Main requirements
+## AI and UAV Direction
 
-Currently, Mission Planner needs:
+The long-term technical direction includes:
 
-Visual Studio 2022
+- AI-assisted UAV operations.
+- Computer vision and perception.
+- Machine learning and deep learning.
+- Telemetry and vehicle-data analysis.
+- Intelligent mission planning.
+- Autonomous decision support.
+- Integration of AI capabilities with UAV systems.
+- Development of intelligent systems for autonomous UAV operations.
+- Future research into advanced perception, decision-making, and autonomy.
 
-##### IDE
+## Spanish Language Support
 
-### Visual Studio Community
-To compile Mission Planner, we recommend using Visual Studio. You can download Visual Studio Community from the [Visual Studio Download page](https://visualstudio.microsoft.com/downloads/ "Visual Studio Download page").
+Spanish support is planned across the complete application, including the original Mission Planner interface and all new SENTRIX-developed components.
 
-Visual Studio is a comprehensive suite with built-in Git support, but it can be overwhelming due to its complexity. To streamline the installation process, you can customize your installation by selecting the relevant "Workloads" and "Individual components" based on your software development needs.
+The objective is to progressively provide a consistent Spanish-language experience while preserving the original functionality, attribution, and licensing of inherited components.
 
-To simplify this selection process, we have provided a configuration file that specifies the components required for MissionPlanner development. Here's how you can use it:
+## Development Philosophy
 
-1. Go to "More" in the Visual Studio installer.
-2. Select "Import configuration."
-3. Use the following file: [vs2022.vsconfig](https://raw.githubusercontent.com/ArduPilot/MissionPlanner/master/vs2022.vsconfig "vs2022.vsconfig").
+SENTRIX is developed progressively with emphasis on:
 
-By following these steps, you'll have the necessary components installed and ready for Mission Planner development.
+- Understanding the existing architecture.
+- Learning software engineering through practical development.
+- Maintaining traceability between inherited and original code.
+- Reliable software engineering and testing.
+- AI and UAV experimentation.
+- Documentation and reproducibility.
+- Incremental development and validation.
+- Open-source collaboration and knowledge sharing.
 
-###### VSCode
-Currently VSCode with C# plugin is able to parse the code but cannot build.
+---
 
-#### 2. Get the code
+## Credits
 
-If you get Visual Studio Community, you should be able to use Git from the IDE. 
-Clone `https://github.com/ArduPilot/MissionPlanner.git` to get the full code.
+SENTRIX Mission Planner is based on the **Mission Planner** project developed by **ArduPilot and its contributors**.
 
-In case you didn't install an IDE, you will need to manually install Git. Please follow instruction in https://ardupilot.org/dev/docs/where-to-get-the-code.html#downloading-the-code-using-git
+SENTRIX preserves the original authorship, copyright notices, attribution, and applicable licenses of Mission Planner and other third-party components.
 
-Open a git bash terminal in the MissionPlanner directory and type, "git submodule update --init" to download all submodules
+### Subsequent SENTRIX Development
 
-#### 3. Build
+**MateoGM — Colombia**
 
-To build the code:
-- Open MissionPlanner.sln with Visual Studio
-- From the Build menu, select "Build MissionPlanner"
+New original code, modifications, AI components, research, integrations, and other contributions developed specifically for SENTRIX will be documented as the project evolves.
 
-### On other systems
-Building Mission Planner on other systems isn't support currently.
+SENTRIX Mission Planner is an independent project and is **not the official Mission Planner project or an official ArduPilot product**.
 
-## Launching Mission Planner on other system
+---
 
-Mission Planner is available for Android via the Play Store. https://play.google.com/store/apps/details?id=com.michaeloborne.MissionPlanner
-Mission Planner can be used with Mono on Linux systems. Be aware that not all functions are available on Linux.
-Native MacOS and iOS support is experimental and not recommended for inexperienced users. https://github.com/ArduPilot/MissionPlanner/releases/tag/osxlatest 
-For MacOS users it is recommended to use Mission Planner for Windows via Boot Camp or Parallels (or equivalent).
+## Licensing
 
-### On Linux
+This repository contains software originating from Mission Planner and other third-party projects. Their respective licenses, copyright notices, and attribution requirements remain applicable to the corresponding components.
 
-#### Requirements
+This repository currently includes:
 
-Those instructions were tested on Ubuntu 20.04.
-Please install Mono, either :
-- `sudo apt install mono-complete mono-runtime libmono-system-windows-forms4.0-cil libmono-system-core4.0-cil libmono-winforms4.0-cil libmono-corlib4.0-cil libmono-system-management4.0-cil libmono-system-xml-linq4.0-cil`
+- `COPYING.txt` — GNU General Public License v3.
+- `LICENSE.txt` — GNU Affero General Public License v3.
+- Additional third-party components may have their own licenses.
 
-#### Launching
+The presence of a license file in the repository does not replace or override the license applicable to third-party or inherited code.
 
-- Get the lastest zipped version of Mission Planner here : https://firmware.ardupilot.org/Tools/MissionPlanner/MissionPlanner-latest.zip
-- Unzip in the directory you want
-- Go into the directory
-- run with `mono MissionPlanner.exe`
+Original and third-party components retain their respective copyright notices, licenses, and applicable conditions.
 
-You can debug Mission Planner on Mono with `MONO_LOG_LEVEL=debug mono MissionPlanner.exe`
+---
 
-### External Services Used
+## Open Source
 
-| Source | Use | How to disable | Custodian |
-|---|---|---|---|
-| https://firmware.oborne.me  | used as a global cdn for checking for MP update check - checked once per day at startup | edit missionplanner.exe.config | Michael Oborne |
-| https://firmware.ardupilot.org  | used for updates to stable, firmware metadata, firmware, user alerts, gstreamer, SRTM, SITL | updates to stable (edit missionplanner.exe.config) - all others Not possible | Ardupilot Team |
-| https://github.com/ | used for updates to beta | edit missionplanner.exe.config | Michael Oborne |
-| https://raw.githubusercontent.com | old param metadata, sitl config files | Not possible | Ardupilot Team |
-| https://api.github.com/ | ardupilot preload param files | Not possible | Ardupilot Team |
-| https://raw.oborne.me/  | used as glocal cdn for parameter metadata generator, no longer primary source | only used at user request to regenerate, edit missionplanner.exe.config | Michael Oborne |
-| https://maps.google.com  | used for elevation api - removed due to abuse | N/A | N/A |
-| https://discuss.cubepilot.org/ | use for SB2 reporting - only on affected boards when user enters details | only used at user request | CubePilot |
-| https://altitudeangel.com  | utm data - user enabled | only used at user request | Altitude Angel |
-| https://autotest.ardupilot.org  | dataflash log meta data, parameter metadata | Not Possible | Ardupilot Team |
-| Many | your choice of map provider google/bing/openstreetmap/etc | User selectable | User/Many |
-| https://www.cloudflare.com | geo location provider - for NFZ selection | Not Possible | Michael Oborne |
-| https://esua.cad.gov.hk | HK no fly zones - user enabled | User selectable | HK Gov |
-| https://ssl.google-analytics.com | Google Analytics Anonymous Stats - Screen Loads, Exceptions/Crashs, Events (Connect), Startup Timing, FW upload (FW Type and Board Type) | disable in Config > Planner > OptOut Anon Stats | Michael Oborne |
-| https://api.dronelogbook.com | logging - disabled | N/A | N/A |
-| https://ardupilot.org | help urls on many pages | User Initiated | ArduPilot Team |
-| https://www.youtube.com | help videos on many pages | User Initiated | ArduPilot Team |
-| https://files.rfdesign.com.au | RFD firmwares | User Initiated | RFDesign |
-| https://teck.airmarket.io | airmarket - disabled | N/A | N/A |
+SENTRIX is being developed as an open-source project.
 
-### Offline Use - No Internet
+The objective is to make the new SENTRIX development available for study, experimentation, collaboration, and further improvement, while respecting the licenses and attribution requirements of the inherited Mission Planner and third-party components.
 
-| Location | Use | Transferable between pcs |
-|---|---|---|
-| C:\ProgramData\Mission Planner\gmapcache | Map cache | yes |
-| C:\ProgramData\Mission Planner\srtm | Elevation data cache | yes |
-| C:\ProgramData\Mission Planner\\*.pdef.xml | Parameter cache | yes |
-| C:\ProgramData\Mission Planner\LogMessages*.xml | DF Log metadata cache | yes |
+Contributions to the new SENTRIX code are welcome, including:
 
-on linux this is in /home/<user>/.local/share/Mission Planner/
+- Bug reports.
+- Code improvements.
+- Documentation.
+- Translations.
+- Testing.
+- AI experimentation.
+- UAV-related research.
+- Software architecture suggestions.
+- New features and integrations.
 
-### Offline Data Supported
-#### Elevation
-* SRTM Cache
-* GeoTiff's in WGS84/EGM96
-* DTED
+---
 
-#### Images
-* Map Cache
-* WMS
-* WMTS
-* GDAL
+## Development
 
-### Paths used - Default
+SENTRIX is developed progressively with emphasis on:
 
-| Location | Use |
-|---|---|
-| C:\ProgramData\Mission Planner | All cross user content |
-| C:\Users\USERNAME\Documents\Mission Planner | All per user content |
+- Understanding the existing architecture.
+- Maintaining traceability between inherited and subsequent code.
+- Reliable software engineering and testing.
+- AI and UAV experimentation.
+- Documentation and reproducibility.
+- Incremental development and validation.
 
-on linux this is in /home/<user>/.local/share/Mission Planner/
+---
 
-### CA Cert
+## Original Project
+
+### Mission Planner
+
+Developed by **ArduPilot and its contributors**.
+
+Official project:
+
+https://github.com/ArduPilot/MissionPlanner
+
+SENTRIX retains the applicable attribution and licensing information associated with the inherited Mission Planner codebase.
+
+---
+
+## Project Notice
+
+SENTRIX Mission Planner is an independent student and research project intended for software development, education, research, simulation, and controlled experimentation.
+
+It should not be represented as the official Mission Planner project or as an official ArduPilot product.
+
+SENTRIX Mission Planner is developed independently by MateoGM and is intended to document the learning and development process involved in building new AI and UAV capabilities.
+
+---
+
+## CA Certificate
+
 A CA cert is installed to the root store and used to sign the windows serial port drivers, and is installed as part of the MSI install.
 
-[![FlagCounter](https://s01.flagcounter.com/count2/A4bA/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_40/viewers_0/labels_1/pageviews_0/flags_0/percent_0/)](https://info.flagcounter.com/A4bA)
+---
+
+# SENTRIX Mission Planner — Español
+
+## Acerca de SENTRIX
+
+SENTRIX Mission Planner es un proyecto estudiantil de código abierto enfocado en la evolución del software de control terrestre para UAV mediante inteligencia artificial, sistemas inteligentes y capacidades autónomas.
+
+El proyecto se basa en Mission Planner y lo amplía progresivamente mediante investigación original, desarrollo de software, experimentación con IA, análisis de datos UAV, percepción, autonomía y futuras capacidades de control inteligente.
+
+SENTRIX se desarrolla como una plataforma de aprendizaje, investigación y experimentación. Las nuevas funciones se incorporarán progresivamente a medida que evolucionen la arquitectura y las prácticas de ingeniería de software.
+
+### Estado del proyecto
+
+- **Estado:** En desarrollo
+- **Tipo:** Proyecto estudiantil / investigación
+- **Plataforma:** Estación de control terrestre para UAV
+- **Desarrollo original:** Mission Planner
+- **Desarrollo posterior:** MateoGM — Colombia
+
+Como estudiante que está iniciando su formación en programación e inteligencia artificial, son bienvenidos los aportes, sugerencias, reportes de errores y mejoras al nuevo código de SENTRIX, ya que pueden ayudar al crecimiento del proyecto.
+
+## Dirección de IA y UAV
+
+La dirección tecnológica a largo plazo incluye:
+
+- Asistencia mediante IA para operaciones UAV.
+- Visión artificial y percepción.
+- Machine learning y deep learning.
+- Telemetría y análisis de datos de vuelo.
+- Planificación inteligente de misiones.
+- Soporte para toma de decisiones autónomas.
+- Integración de capacidades de IA con sistemas UAV.
+- Desarrollo de sistemas inteligentes para operaciones UAV autónomas.
+- Investigación futura en percepción avanzada, toma de decisiones y autonomía.
+
+## Soporte del idioma español
+
+Se plantea incorporar soporte en español en toda la aplicación, incluyendo la interfaz original de Mission Planner y todos los componentes desarrollados posteriormente para SENTRIX.
+
+El objetivo es proporcionar progresivamente una experiencia coherente en español, preservando la funcionalidad, autoría y licencias de los componentes heredados.
+
+## Filosofía de desarrollo
+
+SENTRIX se desarrolla progresivamente con énfasis en:
+
+- Comprensión de la arquitectura existente.
+- Aprendizaje de ingeniería de software mediante desarrollo práctico.
+- Trazabilidad entre código heredado y código desarrollado posteriormente.
+- Ingeniería de software y pruebas.
+- Experimentación con IA y UAV.
+- Documentación y reproducibilidad.
+- Desarrollo y validación incremental.
+- Colaboración y difusión del conocimiento mediante código abierto.
+
+---
+
+## Créditos
+
+SENTRIX Mission Planner se basa en el proyecto **Mission Planner**, desarrollado por **ArduPilot y sus colaboradores**.
+
+SENTRIX conserva la autoría original, los avisos de copyright, las atribuciones y las licencias aplicables de Mission Planner y de los demás componentes de terceros.
+
+### Desarrollo posterior de SENTRIX
+
+**MateoGM — Colombia**
+
+El código nuevo, modificaciones, componentes de IA, investigaciones, integraciones y demás desarrollos realizados específicamente para SENTRIX serán documentados a medida que evolucione el proyecto.
+
+SENTRIX Mission Planner es un proyecto independiente y **no es el proyecto oficial de Mission Planner ni un producto oficial de ArduPilot**.
+
+---
+
+## Código Abierto
+
+SENTRIX se desarrolla como un proyecto de código abierto.
+
+El objetivo es mantener disponible el nuevo desarrollo de SENTRIX para estudio, experimentación, colaboración y mejora continua, respetando al mismo tiempo las licencias y requisitos de atribución de Mission Planner y de los componentes de terceros heredados.
+
+Son bienvenidos los aportes al nuevo código de SENTRIX, incluyendo:
+
+- Reportes de errores.
+- Mejoras de código.
+- Documentación.
+- Traducciones.
+- Pruebas.
+- Experimentación con IA.
+- Investigación relacionada con UAV.
+- Sugerencias de arquitectura de software.
+- Nuevas funciones e integraciones.
+
+---
+
+## Desarrollo
+
+SENTRIX se desarrolla progresivamente con énfasis en:
+
+- Comprensión de la arquitectura existente.
+- Trazabilidad entre código heredado y código desarrollado posteriormente.
+- Ingeniería de software y pruebas.
+- Experimentación con IA y UAV.
+- Documentación y reproducibilidad.
+- Desarrollo y validación incremental.
+
+---
+
+## Proyecto Original
+
+### Mission Planner
+
+Desarrollado por **ArduPilot y sus colaboradores**.
+
+Proyecto oficial:
+
+https://github.com/ArduPilot/MissionPlanner
+
+SENTRIX conserva la información de atribución y las licencias aplicables asociadas al código heredado de Mission Planner.
+
+---
+
+## Aviso del Proyecto
+
+SENTRIX Mission Planner es un proyecto estudiantil y de investigación independiente destinado al desarrollo de software, educación, investigación, simulación y experimentación controlada.
+
+No debe presentarse como el proyecto oficial de Mission Planner ni como un producto oficial de ArduPilot.
+
+SENTRIX Mission Planner es desarrollado independientemente por MateoGM y tiene como objetivo documentar el proceso de aprendizaje y desarrollo involucrado en la construcción de nuevas capacidades de IA y UAV.
+
+---
+
+## Licencias
+
+Este repositorio contiene software proveniente de Mission Planner y de otros proyectos de terceros. Sus respectivas licencias, avisos de copyright y requisitos de atribución continúan siendo aplicables a los componentes correspondientes.
+
+Actualmente este repositorio incluye:
+
+- `COPYING.txt` — GNU General Public License v3.
+- `LICENSE.txt` — GNU Affero General Public License v3.
+- Otros componentes de terceros pueden tener sus propias licencias.
+
+La presencia de un archivo de licencia en el repositorio no reemplaza ni anula la licencia aplicable al código de terceros o al código heredado.
+
+Los componentes originales y de terceros conservarán sus respectivos avisos de autoría, licencias y condiciones aplicables.
+
+---
+
+## Certificado CA
+
+El proyecto original de Mission Planner incluye un certificado CA instalado en el almacén raíz y utilizado para firmar los controladores de puerto serie de Windows, como parte de la instalación MSI.
+
+---
+
+**SENTRIX Mission Planner**  
+**Open Source · Student Project · AI · UAV · Autonomous Systems**
+
+**MateoGM — Colombia**

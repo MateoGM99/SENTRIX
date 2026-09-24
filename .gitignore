@@ -49,3 +49,7 @@ obj3/
 
 /.claude/settings.local.json
 /CLAUDE.md
+
+!docs/
+!docs/images/
+!docs/images/sentrix-banner.png
