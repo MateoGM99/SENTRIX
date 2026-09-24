@@ -1,8 +1,8 @@
-{
+﻿{
   "profiles": {
-    "MissionPlannerLib": {
+    "MissionPlanner": {
       "commandName": "Project",
-      "workingDirectory": "C:\\Users\\serio\\OneDrive\\Escritorio\\PROYECTO - SENTRIX\\SENTRIX"
+      "workingDirectory": "$(ProjectDir)"
     }
   }
 }
